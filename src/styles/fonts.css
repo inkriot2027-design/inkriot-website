@@ -1,0 +1,26 @@
+/* ============================================================
+   INKRIOT — TYPOGRAPHY LOADING
+   Tungsten is a licensed face; if the client drops the real
+   .woff2 files into /public/fonts, the @font-face below will
+   pick them up. Until then we map 'Tungsten' onto Oswald
+   (condensed geometry) loaded from Google Fonts in layout.js,
+   so the identity is preserved without shipping licensed files.
+   ============================================================ */
+
+/* If real Tungsten files are provided, uncomment and place them
+   in /public/fonts. The family name 'Tungsten' will then override
+   the Oswald fallback automatically.
+
+@font-face {
+  font-family: 'Tungsten';
+  src: url('/fonts/Tungsten-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Tungsten';
+  src: url('/fonts/Tungsten-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+*/

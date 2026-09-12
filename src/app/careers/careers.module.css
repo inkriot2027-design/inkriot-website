@@ -1,0 +1,24 @@
+.hero { padding-top: clamp(9rem, 16vh, 12rem); padding-bottom: clamp(2rem, 4vw, 3rem); }
+.heroTitle { font-family: var(--font-tungsten), sans-serif; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.05; }
+.roles { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+.role {
+  font-family: var(--font-tungsten), sans-serif;
+  font-size: clamp(1.1rem, 2.4vw, 1.6rem); text-transform: uppercase;
+  padding: 0.4rem 1.1rem; border: 1px solid var(--line-strong); border-radius: 100px;
+  color: var(--n-700); transition: all 0.25s var(--ease);
+}
+.role:hover { color: var(--ink-black); background: var(--ink-yellow); border-color: var(--ink-yellow); }
+.applySection { background: var(--paper-2); }
+.stepperWrap { max-width: 640px; margin-inline: auto; }
+.stepperWrap :global(.step-circle-container) { background: #fff; border: 1px solid var(--line); }
+.stepperWrap :global(.step-default) { color: var(--n-700); }
+.stepTitle { font-size: clamp(1.3rem, 3vw, 1.8rem); text-transform: uppercase; margin-bottom: 0.8rem; }
+.fieldLabel { display: block; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--n-400); margin-bottom: 0.9rem; }
+.input {
+  width: 100%; background: var(--paper); border: 1px solid var(--line-strong);
+  border-radius: 8px; padding: 0.7rem 0.9rem; margin-top: 0.35rem; color: var(--fg);
+}
+.input:focus { outline: none; border-color: var(--ink-blue); }
+.done { max-width: 600px; margin-inline: auto; padding: 2.5rem; border: 1px solid var(--line); border-radius: 16px; background: #fff; text-align: center; }
+.done h3 { font-size: 1.8rem; text-transform: uppercase; margin-bottom: 0.8rem; }
+.done p { color: var(--n-700); }

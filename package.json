@@ -1,0 +1,29 @@
+{
+  "name": "inkriot-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "INKRIOT® — Creative & Digital Studio. Multidisciplinary creative engine.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "firebase": "^10.13.0",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.13",
+    "matter-js": "^0.20.0",
+    "motion": "^13.2.0",
+    "next": "^14.2.35",
+    "ogl": "^1.0.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.160.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.35"
+  }
+}

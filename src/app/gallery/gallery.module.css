@@ -1,0 +1,7 @@
+.hero { padding-top: clamp(9rem, 18vh, 13rem); padding-bottom: clamp(2rem, 4vw, 3rem); }
+.heroTitle { font-family: 'Tungsten', var(--font-tungsten), sans-serif; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.05; }
+.gallerySection { padding-block: clamp(1rem, 3vw, 2rem); overflow: hidden; }
+.mosaic { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+@media (max-width: 800px) { .mosaic { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .mosaic { grid-template-columns: 1fr; } }
+.tileImg { aspect-ratio: 1; border-radius: 10px; border: 1px solid var(--line); }

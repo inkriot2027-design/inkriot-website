@@ -1,0 +1,71 @@
+.footer {
+  border-top: 1px solid var(--line);
+  padding-block: clamp(3.5rem, 6vw, 6rem) 2.5rem;
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(43,76,255,0.06), transparent 60%),
+    var(--paper-2);
+  position: relative;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  border-bottom: 1px solid var(--line);
+}
+.ctaHeading {
+  font-family: 'Tungsten', var(--font-tungsten), sans-serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.05;
+  color: var(--ink-black);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 0.8fr;
+  gap: 2.5rem;
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+@media (max-width: 800px) { .grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .grid { grid-template-columns: 1fr; } }
+
+.brand {
+  font-family: 'Tungsten', var(--font-tungsten), sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-transform: uppercase;
+  line-height: 1;
+}
+.brand span { font-size: 0.45em; vertical-align: super; }
+.tagline { color: var(--n-300); font-size: 0.9rem; margin-top: 0.8rem; max-width: 30ch; }
+
+.nav { display: flex; flex-direction: column; gap: 0.6rem; }
+.nav a, .social a {
+  color: var(--n-200);
+  font-size: 0.95rem;
+  width: fit-content;
+  transition: color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+.nav a:hover, .social a:hover { color: var(--ink-yellow); transform: translateX(4px); }
+
+.social { display: flex; flex-direction: column; gap: 0.6rem; }
+.colTitle {
+  font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--n-400); margin-bottom: 0.4rem;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--n-400);
+}
+.closing { color: var(--n-300); text-transform: none; letter-spacing: 0; font-style: italic; }

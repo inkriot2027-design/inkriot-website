@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: radial-gradient(120% 100% at 50% 0%, rgba(43,76,255,0.06), transparent 60%), var(--n-800);
+}
+.hint {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  font-family: 'Tungsten', var(--font-tungsten), sans-serif;
+  font-size: 2rem; text-transform: uppercase; color: var(--n-500, #4a4a52);
+  pointer-events: none;
+}
+.tag {
+  position: absolute; top: 0; left: 0;
+  padding: 0.5rem 1rem;
+  background: var(--ink-yellow);
+  color: var(--ink-black);
+  border-radius: 100px;
+  font-size: 0.8rem; font-weight: 700;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  white-space: nowrap;
+  will-change: transform;
+}
+.tag:nth-child(3n) { background: var(--ink-red); color: #fff; }
+.tag:nth-child(3n+1) { background: var(--ink-blue); color: #fff; }

@@ -1,0 +1,20 @@
+.sidebar {
+  position: fixed;
+  left: clamp(0.75rem, 1.5vw, 1.5rem);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 60;
+}
+.sidebar ul { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; }
+.item { display: flex; align-items: center; gap: 0.8rem; cursor: pointer; color: var(--ink-black); }
+.line { width: 20px; height: 1px; background: currentColor; opacity: 0.35; transition: width 0.35s var(--ease), opacity 0.35s var(--ease); }
+.label {
+  font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+  opacity: 0; transform: translateX(-6px);
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+  white-space: nowrap; color: var(--n-500);
+}
+.item:hover .line, .active .line { width: 38px; opacity: 1; }
+.item:hover .label, .active .label { opacity: 1; transform: translateX(0); }
+.active .line { background: var(--ink-blue); }
+@media (max-width: 1100px) { .sidebar { display: none; } }

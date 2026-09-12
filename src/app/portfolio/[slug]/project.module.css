@@ -1,0 +1,29 @@
+.hero { padding-top: clamp(8rem, 16vh, 12rem); padding-bottom: clamp(2rem, 4vw, 3rem); border-bottom: 1px solid var(--line); }
+.back { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--n-300); transition: color 0.25s var(--ease); }
+.back:hover { color: var(--ink-yellow); }
+.title { font-family: 'Tungsten', var(--font-tungsten), sans-serif; font-size: clamp(2.6rem, 8vw, 5rem); line-height: 1.05; margin: 0.5rem 0; }
+.title::after { content: ""; display: block; width: 80px; height: 4px; background: var(--pc); margin-top: 1rem; }
+.client { color: var(--n-300); font-size: 1rem; }
+.disciplines { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
+.disciplines span { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.8rem; border: 1px solid var(--line); border-radius: 100px; color: var(--n-200); }
+
+.cover { width: 100%; max-height: 78vh; overflow: hidden; }
+.cover img { width: 100%; height: 100%; object-fit: cover; }
+
+.caseGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(2rem, 4vw, 3.5rem); }
+@media (max-width: 720px) { .caseGrid { grid-template-columns: 1fr; } }
+.caseLabel { font-size: clamp(1.2rem, 2.5vw, 1.6rem); text-transform: uppercase; margin-bottom: 0.8rem; color: var(--ink-yellow); }
+.caseBody { color: var(--n-200); font-size: 1.05rem; line-height: 1.6; }
+
+.tools { margin-top: 3rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.toolsLabel { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--n-400); }
+.toolList { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.toolList span { font-size: 0.78rem; padding: 0.4rem 0.9rem; border: 1px solid var(--line); border-radius: 100px; color: var(--n-200); }
+
+.gallery { margin-top: 3rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+@media (max-width: 720px) { .gallery { grid-template-columns: 1fr; } }
+.gallery img { width: 100%; border-radius: 8px; border: 1px solid var(--line); }
+
+.next { padding-block: clamp(3rem, 8vw, 6rem); border-top: 1px solid var(--line); }
+.nextLink { font-family: 'Tungsten', var(--font-tungsten), sans-serif; font-size: clamp(2rem, 6vw, 4rem); text-transform: uppercase; transition: color 0.25s var(--ease); display: inline-block; margin-top: 0.5rem; }
+.nextLink:hover { color: var(--ink-yellow); }

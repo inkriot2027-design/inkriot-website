@@ -1,0 +1,17 @@
+.hero { padding-top: clamp(9rem, 18vh, 13rem); padding-bottom: clamp(2rem, 4vw, 3rem); }
+.heroTitle { font-family: 'Tungsten', var(--font-tungsten), sans-serif; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.05; }
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+.filter { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.5rem 1rem; border: 1px solid var(--line); border-radius: 100px; color: var(--n-300); cursor: pointer; transition: all 0.25s var(--ease); }
+.filter:hover { color: var(--ink-black); }
+.active { background: var(--ink-white); color: var(--ink-black); border-color: var(--ink-white); }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+.card { border: 1px solid var(--line); border-radius: 12px; padding: clamp(1.4rem, 2.5vw, 2rem); background: var(--n-800); min-height: 260px; display: flex; flex-direction: column; transition: transform 0.3s var(--ease), border-color 0.3s var(--ease); cursor: pointer; }
+.card:hover { transform: translateY(-4px); border-color: var(--cc); }
+.cardTop { display: flex; justify-content: space-between; margin-bottom: 1rem; }
+.cat { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cc); }
+.read { font-size: 0.7rem; color: var(--n-400); }
+.card h2 { font-size: 1.4rem; text-transform: uppercase; line-height: 1.05; margin-bottom: 0.8rem; }
+.card p { color: var(--n-300); font-size: 0.92rem; flex: 1; }
+.more { margin-top: 1rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-yellow); }

@@ -1,0 +1,23 @@
+.hero { padding-top: clamp(9rem, 18vh, 13rem); padding-bottom: clamp(2rem, 4vw, 3rem); }
+.heroTitle { font-family: 'Tungsten', var(--font-tungsten), sans-serif; font-size: clamp(2.1rem, 5.5vw, 3.6rem); line-height: 1.05; }
+.glassRow { margin-top: 2.5rem; max-width: 560px; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+.filter {
+  font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.5rem 1rem; border: 1px solid var(--line); border-radius: 100px;
+  color: var(--n-300); cursor: pointer; transition: all 0.25s var(--ease);
+}
+.filter:hover { color: var(--ink-black); border-color: var(--line-strong); }
+.active { background: var(--ink-white); color: var(--ink-black); border-color: var(--ink-white); }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2vw, 1.6rem); }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+.card { display: block; }
+.media { aspect-ratio: 4/5; border-radius: 10px; border: 1px solid var(--line); }
+.meta { padding-top: 1rem; }
+.meta > span { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.meta h3 { font-size: 1.3rem; text-transform: uppercase; margin: 0.4rem 0 0.2rem; transition: color 0.25s var(--ease); }
+.card:hover h3 { color: var(--ink-yellow); }
+.client { color: var(--n-400); font-size: 0.82rem; }

@@ -1,0 +1,27 @@
+/* Full-screen, non-interactive overlay for the image trail.
+   Fixed so it aligns with clientX/clientY under smooth scroll.
+   pointer-events:none guarantees it never blocks any interaction. */
+.trail {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 60; /* above page content, BELOW nav (9999) / dock (70) / menu overlay */
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(40px, 3.5vw, 60px);
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+  box-shadow: 0 12px 30px -12px rgba(10, 10, 11, 0.35);
+}

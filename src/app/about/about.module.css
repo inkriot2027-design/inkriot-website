@@ -1,0 +1,514 @@
+/* ============================================================
+   INKRIOT — ABOUT PAGE
+   ============================================================ */
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 58vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-top: clamp(9rem, 18vh, 13rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.heroTitle {
+  font-family: 'Tungsten', var(--font-tungsten), sans-serif;
+
+  font-size: clamp(2.2rem, 6vw, 4rem);
+
+  line-height: 1.05;
+
+  color: var(--ink-black);
+
+  margin: 0;
+}
+
+
+/* ============================================================
+   STORY
+   ============================================================ */
+
+.storyGrid {
+  display: grid;
+
+  grid-template-columns: 1fr 1.3fr;
+
+  gap: clamp(2rem, 5vw, 4rem);
+
+  align-items: start;
+}
+
+.storyBody {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.3rem;
+
+  color: var(--n-200);
+
+  font-size: 1.05rem;
+
+  line-height: 1.6;
+}
+
+.thread {
+  font-size: 1.2rem;
+
+  color: var(--ink-black);
+}
+
+
+/* ============================================================
+   VISUAL SECTION
+   ============================================================ */
+
+.visualSection {
+  padding-block: clamp(2rem, 5vw, 4rem);
+}
+
+.dissolveRow {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 1.5rem;
+}
+
+.dissolve {
+  aspect-ratio: 4 / 5;
+
+  border-radius: 10px;
+
+  border: 1px solid var(--line);
+
+  overflow: hidden;
+}
+
+.hoverNote {
+  text-align: center;
+
+  margin-top: 1rem;
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.25em;
+
+  text-transform: uppercase;
+
+  color: var(--n-400);
+}
+
+
+/* ============================================================
+   FIVE THINGS WE KEEP RETURNING TO
+   ============================================================ */
+
+/*
+   IMPORTANT:
+   The Reveal component wraps each .driver.
+   display: contents removes that wrapper from the grid
+   layout so the five .driver cards become the actual
+   five grid columns.
+*/
+
+.drivers {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 0;
+
+  border: 1px solid var(--line);
+
+  background: var(--line);
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   REVEAL WRAPPER FIX
+   ============================================================ */
+
+.drivers > * {
+  display: contents;
+}
+
+
+/* ============================================================
+   DRIVER CARD
+   ============================================================ */
+
+.driver {
+  width: 100%;
+
+  min-width: 0;
+
+  min-height: 260px;
+
+  box-sizing: border-box;
+
+  background: var(--paper);
+
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: flex-start;
+
+  /*
+     Explicit divider.
+     This guarantees the vertical line exists.
+  */
+  border-right: 1px solid var(--line);
+
+  overflow: hidden;
+}
+
+
+/*
+   Remove divider from the fifth box.
+*/
+
+.driver:nth-of-type(5) {
+  border-right: none;
+}
+
+
+/* ============================================================
+   NUMBER
+   ============================================================ */
+
+.driverNo {
+  font-family: 'Tungsten', var(--font-tungsten), sans-serif;
+
+  font-size: 1.3rem;
+
+  line-height: 1;
+
+  color: var(--ink-yellow);
+
+  margin: 0 0 1.3rem;
+}
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.driver h3 {
+  font-family: 'Tungsten', var(--font-tungsten), sans-serif;
+
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  color: var(--ink-black);
+
+  margin: 0 0 0.8rem;
+}
+
+
+/* ============================================================
+   DESCRIPTION
+   ============================================================ */
+
+.driver p {
+  color: var(--n-300);
+
+  font-size: 0.9rem;
+
+  line-height: 1.5;
+
+  margin: 0;
+
+  max-width: 22ch;
+}
+
+
+/* ============================================================
+   APPROACH SECTION
+   ============================================================ */
+
+.approachSection {
+  background: var(--paper-2);
+}
+
+.approach {
+  list-style: none;
+
+  display: flex;
+
+  flex-direction: column;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+.step {
+  display: flex;
+
+  gap: 1.5rem;
+
+  padding: 1.6rem 0;
+
+  border-top: 1px solid var(--line);
+
+  align-items: baseline;
+}
+
+.step:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.stepNo {
+  font-family: 'Tungsten', var(--font-tungsten), sans-serif;
+
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+
+  color: var(--ink-blue);
+
+  min-width: 1.5em;
+}
+
+.step h3 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+
+  text-transform: uppercase;
+
+  margin: 0 0 0.3rem;
+
+  color: var(--ink-black);
+}
+
+.step p {
+  color: var(--n-300);
+
+  margin: 0;
+
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   TECHNOLOGY
+   ============================================================ */
+
+.tech {
+  max-width: 60ch;
+}
+
+.techTitle {
+  font-family: 'Tungsten', var(--font-tungsten), sans-serif;
+
+  font-size: clamp(2.2rem, 6vw, 4rem);
+
+  line-height: 1.05;
+
+  color: var(--ink-black);
+
+  margin: 0;
+}
+
+.techLine {
+  font-family: 'Tungsten', var(--font-tungsten), sans-serif;
+
+  font-size: clamp(1.3rem, 3vw, 2rem);
+
+  text-transform: uppercase;
+
+  color: var(--ink-black);
+}
+
+
+/* ============================================================
+   CLOSING
+   ============================================================ */
+
+.closing {
+  padding-block: clamp(3.5rem, 8vw, 6rem);
+
+  text-align: center;
+
+  background: var(--paper-2);
+}
+
+.closingHeading {
+  margin-top: 1.5rem;
+
+  font-family: var(--font-tungsten), sans-serif;
+
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+
+  text-transform: uppercase;
+
+  display: flex;
+
+  justify-content: center;
+
+  color: var(--ink-black);
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+  .drivers {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .driver {
+    min-height: 230px;
+
+    border-right: 1px solid var(--line);
+
+    border-bottom: 1px solid var(--line);
+  }
+
+  .driver:nth-of-type(3) {
+    border-right: none;
+  }
+
+}
+
+
+/* ============================================================
+   STORY TABLET
+   ============================================================ */
+
+@media (max-width: 820px) {
+
+  .storyGrid {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+
+}
+
+
+/* ============================================================
+   DISSOLVE MOBILE
+   ============================================================ */
+
+@media (max-width: 720px) {
+
+  .dissolveRow {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ============================================================
+   SMALL TABLET
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+  .drivers {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .driver {
+    min-height: 210px;
+
+    border-right: 1px solid var(--line);
+
+    border-bottom: 1px solid var(--line);
+  }
+
+  .driver:nth-of-type(2n) {
+    border-right: none;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 500px) {
+
+  .hero {
+    min-height: auto;
+
+    padding-top: 7rem;
+
+    padding-bottom: 5rem;
+  }
+
+  .drivers {
+    grid-template-columns: 1fr;
+  }
+
+  .driver {
+    min-height: auto;
+
+    padding: 1.5rem;
+
+    border-right: none;
+
+    border-bottom: 1px solid var(--line);
+  }
+
+  .driver:last-child {
+    border-bottom: none;
+  }
+
+  .driver p {
+    max-width: 40ch;
+  }
+
+  .step {
+    gap: 1rem;
+
+    padding: 1.3rem 0;
+  }
+
+  .stepNo {
+    min-width: 1.3em;
+  }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .driver {
+    transition: none;
+  }
+
+}

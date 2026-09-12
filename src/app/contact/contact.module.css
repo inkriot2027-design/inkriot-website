@@ -1,0 +1,44 @@
+.hero { position: relative; overflow: hidden; min-height: 58vh; display: flex; flex-direction: column; justify-content: center; padding-top: clamp(9rem, 18vh, 13rem); padding-bottom: clamp(3rem, 6vw, 5rem); }
+.heroTitle { font-family: 'Tungsten', var(--font-tungsten), sans-serif; font-size: clamp(2.1rem, 5.5vw, 3.6rem); line-height: 1.05; }
+
+.layout { display: grid; grid-template-columns: 1.6fr 1fr; gap: clamp(2rem, 5vw, 4rem); }
+@media (max-width: 860px) { .layout { grid-template-columns: 1fr; } }
+
+.form { display: flex; flex-direction: column; gap: 1.2rem; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+@media (max-width: 520px) { .row { grid-template-columns: 1fr; } }
+.field { display: flex; flex-direction: column; gap: 0.4rem; }
+.field span { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--n-300); }
+.field input, .field select, .field textarea {
+  background: #fff; border: 1px solid var(--line-strong); border-radius: 8px;
+  padding: 0.85rem 1rem; color: var(--fg); transition: border-color 0.25s var(--ease);
+  font-family: inherit;
+}
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--ink-yellow); outline: none; }
+.field textarea { resize: vertical; }
+
+.submit {
+  align-self: flex-start;
+  padding: 0.95rem 1.8rem; border-radius: 100px;
+  background: var(--ink-yellow); color: var(--ink-black);
+  font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700;
+  cursor: pointer; transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+.submit:hover { transform: translateY(-2px); }
+.submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.error { color: var(--ink-red); font-size: 0.9rem; }
+
+.success { border: 1px solid var(--line); border-radius: 12px; padding: 2.5rem; background: var(--n-800); }
+.success h2 { font-size: 2rem; text-transform: uppercase; margin-bottom: 0.8rem; }
+.success p { color: var(--n-200); }
+.reset { margin-top: 1.5rem; padding: 0.7rem 1.4rem; border: 1px solid var(--line); border-radius: 100px; color: var(--n-200); cursor: pointer; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; }
+
+.aside { display: flex; flex-direction: column; gap: 2rem; }
+.asideTitle { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--n-400); margin-bottom: 0.5rem; }
+.email { font-family: var(--font-tungsten), sans-serif; font-size: 1.6rem; color: var(--ink-black); transition: color 0.25s var(--ease); }
+.email:hover { color: var(--ink-yellow); }
+.social { display: flex; flex-direction: column; gap: 0.4rem; }
+.social a { color: var(--n-200); transition: color 0.25s var(--ease); }
+.social a:hover { color: var(--ink-yellow); }
+.tag { border-top: 1px solid var(--line); padding-top: 1.5rem; }
+.tag p { font-family: 'Tungsten', var(--font-tungsten), sans-serif; font-size: 1.6rem; text-transform: uppercase; }

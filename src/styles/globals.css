@@ -1,0 +1,167 @@
+/* ============================================================
+   INKRIOT — GLOBAL DESIGN SYSTEM (LIGHT)
+   Strict rule: no dark/black PAGE backgrounds anywhere.
+   Base = off-white #F5F4F0, black typography, intentional accents.
+   ============================================================ */
+
+:root {
+  --font-tungsten: 'Oswald', 'Inter', sans-serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+
+  --ink-black: #0a0a0b;
+  --ink-white: #f5f4f0;
+  --ink-red: #e5262b;
+  --ink-green: #16b357;
+  --ink-blue: #2b4cff;
+  --ink-orange: #ff7a1a;
+  --ink-yellow: #ffd400;
+
+  --paper: #f5f4f0;
+  --paper-2: #efeee9;
+  --paper-3: #e7e6e0;
+  --line: rgba(10, 10, 11, 0.12);
+  --line-strong: rgba(10, 10, 11, 0.22);
+
+  --n-900: #0a0a0b;
+  --n-700: #24242a;
+  --n-500: #4a4a52;
+  --n-400: #6b6b74;
+  --n-300: #85858e;
+
+  --bg: var(--paper);
+  --fg: var(--ink-black);
+  --muted: var(--n-400);
+  --accent: var(--ink-blue);
+
+  --step--1: clamp(0.78rem, 0.74rem + 0.2vw, 0.88rem);
+  --step-0: clamp(0.95rem, 0.9rem + 0.25vw, 1.02rem);
+  --step-1: clamp(1.1rem, 1rem + 0.5vw, 1.3rem);
+  --step-2: clamp(1.4rem, 1.2rem + 0.9vw, 1.85rem);
+  --step-3: clamp(1.8rem, 1.5rem + 1.5vw, 2.6rem);
+  --step-4: clamp(2.2rem, 1.8rem + 2.2vw, 3.4rem);
+  --step-5: clamp(2.6rem, 2rem + 3vw, 4.2rem);
+
+  --gap: clamp(1rem, 0.8rem + 1vw, 1.75rem);
+  --pad-x: clamp(1.25rem, 0.8rem + 3vw, 5rem);
+  --section-y: clamp(3.5rem, 2.6rem + 5vw, 7rem);
+
+  --maxw: 1360px;
+  --radius: 6px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* ---- Compatibility aliases ----
+     Older component CSS referenced a dark scale (--n-800 as card bg,
+     --n-200 as light text, etc). Remap those names to LIGHT surfaces
+     so no dark page/card backgrounds survive. Text tokens map to dark
+     ink so text stays readable on the light base. */
+  --n-800: #efeee9;   /* was dark card → now light raised surface */
+  --n-600: #e7e6e0;   /* was dark border surface → light */
+  --n-200: #24242a;   /* was light text → now dark ink text */
+  --n-100: #0a0a0b;
+  --n-500b: #4a4a52;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: auto;
+  background: var(--paper);
+}
+
+body {
+  background: var(--paper);
+  color: var(--fg);
+  font-family: var(--font-inter);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-tungsten);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--ink-black);
+  padding-block: 0.02em;
+}
+
+a { color: inherit; text-decoration: none; }
+img, video, canvas { max-width: 100%; display: block; }
+button { font: inherit; color: inherit; background: none; border: none; }
+input, textarea, select { font: inherit; color: inherit; }
+
+::selection { background: var(--ink-yellow); color: var(--ink-black); }
+:focus-visible { outline: 2px solid var(--ink-blue); outline-offset: 3px; }
+
+.container { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--pad-x); }
+.section { padding-block: var(--section-y); position: relative; }
+
+.eyebrow {
+  font-family: var(--font-inter);
+  font-size: var(--step--1);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--n-400);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+}
+.eyebrow::before { content: ""; width: 1.8rem; height: 1px; background: currentColor; display: inline-block; }
+
+.display { font-family: var(--font-tungsten); font-size: var(--step-4); line-height: 1.0; text-transform: uppercase; letter-spacing: -0.01em; }
+.display--lg { font-size: var(--step-5); }
+
+.lead {
+  font-size: var(--step-1);
+  color: var(--n-700);
+  max-width: 52ch;
+  line-height: 1.5;
+  text-transform: none;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.muted { color: var(--muted); }
+
+.c-red { color: var(--ink-red); }
+.c-green { color: var(--ink-green); }
+.c-blue { color: var(--ink-blue); }
+.c-orange { color: var(--ink-orange); }
+.c-yellow { color: #d8b400; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+html.no-scroll, body.no-scroll { overflow: hidden; }
+
+/* ---- Text-animation clip safety ----
+   React Bits text components (and headings using them) can clip tall
+   uppercase caps/descenders when nested in tight-line-height headings.
+   Give the visible wrappers a little vertical breathing room. This does
+   NOT touch their sr-only elements or animation internals. */
+.animated-gradient-text,
+.text-rotate,
+.fold-text,
+.blur-text,
+.shiny-text {
+  line-height: 1.15;
+  padding-block: 0.04em;
+  overflow: visible;
+}
+.text-rotate { vertical-align: baseline; }
+
+@media (max-width: 480px) { :root { --pad-x: 1.25rem; } }
